@@ -1,0 +1,164 @@
+/* utils/cardPage/cardPage.wxss */
+.cardPage
+{
+  display:flex;
+  flex-direction: column;
+  height:300rpx;
+  width:100%;
+  background-color: rgba(255,255,255,0.7);
+  margin-top:30rpx;
+}
+
+.cardTitle
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.title
+{
+  font-size:12px;
+  color:black;
+}
+
+.image
+{
+  display: flex;
+  flex-direction: row;
+  height:100%;
+}
+
+.img{
+  flex:1;
+  border:4px #fff solid;
+  height:90%;
+}
+
+.selection
+{
+  flex:2;
+  display: flex;
+  height:260rpx;
+  flex-direction: column;
+  position: relative;
+}
+
+.selectblock
+{
+display: flex;
+flex-direction: column;
+position: absolute;
+height:260rpx;
+bottom: 2%;
+right:0;
+}
+
+.select
+{
+  display: flex;
+  flex:2;
+  flex-direction: row;
+  width: 400rpx;
+}
+
+.colorselect
+{
+  display: flex;
+  flex:2;
+  flex-direction: row;
+  width: 300rpx;
+  border:4rpx #eee solid;
+  margin:0; 
+}
+
+.selectsign
+{
+  flex:1;
+  border:4rpx #eee solid;
+  text-align: center; 
+  height:100%; 
+  margin: auto auto;
+}
+
+.selectimg
+{
+  flex:1;
+  height:100%;
+}
+
+.stepper {  
+    flex:2;
+    width:300rpx;  
+    /*给主容器设一个边框*/  
+    border:4rpx #eee solid;
+    margin:0;  
+    display:flex;
+    flex-direction: row;
+} 
+
+.stepper-hide
+{
+  display: none;
+}
+  
+/*加号和减号*/  
+.stepper text {  
+    flex:1; 
+    line-height: 15px;  
+    text-align: center;  
+    float: left;  
+    margin: auto auto;  
+}  
+  
+/*数值*/  
+.stepper input {  
+    flex:2;
+    height:100%;
+    float: left;  
+    margin: 0 auto;  
+    text-align: center;  
+    font-size: 12px;  
+    color: #000000;
+    /*给中间的input设置左右边框即可*/  
+    border-left:4rpx #eee solid;
+    border-right:4rpx #eee solid;  
+}  
+  
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+}  
+
+.itemname
+{
+  flex:3;
+  font-size:28rpx;
+  text-align: left;
+  width:300rpx;
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden;  
+  text-overflow: ellipsis; 
+  -webkit-box-orient: vertical;
+  word-break: break-all;  
+}
+
+.itemnameforwish
+{
+  flex:3;
+  font-size:28rpx;
+  text-align: left;
+  width:400rpx;
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden;  
+  text-overflow: ellipsis; 
+  -webkit-box-orient: vertical;
+  word-break: break-all;  
+  margin-top:10%;
+}

@@ -1,0 +1,51 @@
+<!--pages/feedbackpage/feedbackpage.wxml-->
+<!--pages/memberpage/memberpage.wxml-->
+<!--pages/orderpage/orderpage.wxml-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<image style="height:40rpx;width:40rpx;position:absolute;bottom:5%;left:2%;" src="../image/backtopage.png" bindtap="tap"></image>
+</view>
+
+<view class="custom_view"><!--操作区-->
+  <image class="custom_bg" style="height:{{CHeight}}px;width:{{CWidth}}px;" src="../image/image.jpg" mode="aspectFill"></image><!--背景图片-->
+  <view class="custom_content" style="align-items: center;"><!--页面内容-->
+
+
+
+<!-- <block wx:for-items="{{dialogContent}}" wx:key="number">
+<view class="conversation">
+    <view class="time">
+    <text>item.time</text>
+    <text>response.number</text>
+    </view>
+    <view class="post">
+      sendcontent
+    </view>
+    <view class="get">
+      responsecontent
+    </view>
+</view>
+</block> -->
+  <!-- <view class="inputview">
+  <view style="width:100%;text-align:center;font-size:40rpx;margin-top:20rpx;">反馈意见</view>
+
+  <view class="inputblock">
+  <input class="input" value="{{tempcontent}}" bindblur="inputevent"></input>
+  </view>
+  </view>
+  <button class="inputbuttom" bindtap="tapsend"><cover-image src="../image/发送.png"></cover-image></button>
+ -->
+
+<text style="font-size:40rpx;background-color:#fff;">填写反馈</text>
+<view>
+<textarea bindblur="inputevent" placeholder="感谢你提出的宝贵意见，我们会尽快完善" value="{{tempcontent}}" class="textarea">
+</textarea>
+<!-- <text>清除</text> -->
+</view> 
+<button class="inputbuttom" bindtap="tapsend"><cover-image src="../image/发送.png"></cover-image></button>
+
+
+
+
+
+</view>
+</view>

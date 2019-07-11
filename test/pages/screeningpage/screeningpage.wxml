@@ -1,0 +1,36 @@
+<!--pages/orderpage/orderpage.wxml-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<image style="height:40rpx;width:40rpx;position:absolute;bottom:5%;left:2%;" src="../image/backtopage.png" bindtap="tap"></image>
+</view>
+
+<view class="custom_view"><!--操作区-->
+  <image class="custom_bg" style="height:{{CHeight}}px;width:{{CWidth}}px;" src="../image/image.jpg" mode="aspectFill"></image><!--背景图片-->
+  <view class="custom_content" style="dispay:flex;flex-diretion:column;"><!--页面内容-->
+
+
+
+
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="skill-title">
+        {{multiArray[0][multiIndex[0]]}}
+        {{multiArray[1][multiIndex[1]]}}
+        {{multiArray[2][multiIndex[2]]}}
+        {{multiArray[3][multiIndex[3]]}}
+      </view>
+      <image class='drop-down' src='../image/image.jpg' mode='aspectFit'></image>
+    </picker>
+
+<view class="content">
+<import src="../../utils/detailPage/detailPage.wxml"/>
+<block wx:for="{{goodsWelfareItems}}" wx:for-item="goodsItem">
+<template is="screeningDetailPage" data="{{...goodsItem,url:serverurl}}"/>
+</block>
+</view>
+
+
+
+
+
+
+</view>
+</view>

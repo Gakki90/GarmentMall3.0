@@ -1,0 +1,28 @@
+<!--utils/cardPage/cardPage.wxml-->
+<template name="orderPage">
+<view class="cardPage" bindtap="tapItem">
+<view class="cardTitle">
+<text class="title">{{brand}}</text>
+<text class="title" style="position:absolute;right:0;">{{orderId}}</text><!--订单号-->
+</view>
+<view class="image">
+<image class="img" src="{{url}}{{goodsPicUrl}}" mode="aspectFill"></image>
+<view class="selection">
+<view class="selectblock">
+<view class="goodsname">{{goodsName}}</view>
+<view class="{{ deliveryshow ? 'deliveryshow' : 'deliveryshownone' }}">{{delivery}}
+</view>
+
+<view class="state">
+<view class="goodstate">{{statename}}</view>
+<view class="{{ showOp ? 'stateoperation' : 'stateoperationnone' }}" data-operation="{{opName}}" data-orderid="{{orderId}}" bindtap="tapoperation">{{opName}}</view>
+<view class="{{ ansShow ? 'ansShow' : 'ansShownone' }}">{{ans}}
+</view>
+</view>
+<view class="date">{{orderDate}}-{{leaseTerm}}
+</view>
+</view>
+</view>
+</view>
+</view>
+</template>

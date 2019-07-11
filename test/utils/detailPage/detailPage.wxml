@@ -1,0 +1,96 @@
+<!--utils/detailPage/detailPage.wxml-->
+<!--<text>utils/detailPage/detailPage.wxml</text>-->
+
+<template name="itemDetailPage">
+<view>
+
+<image style="width:100%;height:600rpx;border:8rpx #fff solid;" mode="aspectFit" src="{{serverurl}}{{itemInfo[0].goodsPicUrl}}"></image>
+
+
+<!--图文详情按钮-->
+<view class="tab-bar-detail" bindtap="tapbrand" data-brand="{{itemInfo[0].brand}}">
+      <text>品牌</text>
+      <text>专卖</text>
+</view> 
+
+<view class="product-price-wrap">
+ <view>
+    <p class="product-price-new">原价¥{{itemInfo[0].goodsPrice}}</p>  
+    <!--<p class="product-price-old">{{serverurl}}</p>--> 
+    <!--<p class="discount">8.8折</p>-->
+  </view>
+  <!--<view>
+    <image src="../../images/bottomNav/share.png" />  
+  </view-->   
+</view>
+<view class="product-name-wrap">
+  <text>{{itemInfo[0].goodsName}}</text>
+</view>
+
+<!--<view class="details"> 
+   <scroll-view scroll-y="true"> 
+       <text>item.itemInfo.detailInfo</text> 
+   </scroll-view> 
+ </view>-->
+
+</view>
+</template>
+
+
+
+
+
+
+
+
+
+<template name="brandDetailPage">
+
+<view class="welfare-container">  
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+          <view class="welfares-good" catchtap="tapSingleItemForNew" data-type="{{goodsName}}" data-typeid="{{goodsId}}">
+            <view>
+              <image src="{{url}}{{goodsPicUrl}}" class="brandimage" mode="aspectFill"/>
+            </view>
+            <view class="product-name">
+              {{goodsName}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price">￥{{goodsPrice}}</p>
+              <!--<p class="discount">{{discount}}折</p>-->  
+            </view>
+            
+          </view>
+
+      </view>
+  </scroll-view>  
+</view> 
+
+</template>
+
+
+<template name="screeningDetailPage">
+
+<view class="welfare-container">  
+  <scroll-view scroll-y="true">
+      <view class="screening">
+          <view class="welfares-good" catchtap="tapSingleItemForNew" data-type="{{goodsName}}" data-typeid="{{goodsId}}">
+            <view>
+              <image src="{{url}}{{goodsPicUrl}}" class="brandimage" mode="aspectFill"/>
+            </view>
+            <view class="product-name">
+              {{goodsName}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price">￥{{goodsPrice}}</p>
+              <!--<p class="discount">{{discount}}折</p>-->  
+            </view>
+            
+          </view>
+
+      </view>
+  </scroll-view>  
+</view> 
+
+</template>

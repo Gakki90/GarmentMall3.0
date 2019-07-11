@@ -1,0 +1,196 @@
+/* utils/cardPage/cardPage.wxss */
+
+.cardPage
+{
+  display:flex;
+  flex-direction: column;
+  height:300rpx;
+  width:100%;
+  background-color: rgba(255,255,255,0.8);
+  margin-top:30rpx;
+  border:4rpx  rgb(254, 238, 54) solid;
+}
+
+.cardTitle
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.title
+{
+  font-size:12px;
+  color:black;
+}
+
+.image
+{
+  display: flex;
+  flex-direction: row;
+  height:100%;
+}
+
+.img{
+  flex:1;
+  border:4px #fff solid;
+  height:90%;
+}
+
+.selection
+{
+  flex:2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.selectblock
+{
+display: flex;
+flex-direction: column;
+width:80%;
+position: absolute;
+bottom: 10%;
+right:0;
+}
+
+.select
+{
+  display: flex;
+  flex:2;
+  flex-direction: row;
+  width: 260rpx;
+  height:80rpx;
+}
+
+.selectsign
+{
+  flex:1;
+  border:4rpx rgb(254, 238, 54) solid;
+  text-align: center;  
+}
+
+.selectimg
+{
+  flex:1;
+  height:100%;
+}
+
+.stepper {  
+    flex:1;
+    width:300rpx;  
+    /*给主容器设一个边框*/  
+    border:4rpx rgb(254, 238, 54) solid;
+    margin:0;  
+    display:flex;
+    flex-direction: row;
+} 
+
+.stepper-hide
+{
+  display: none;
+}
+  
+/*加号和减号*/  
+.stepper text {  
+    flex:1; 
+    line-height: 15px;  
+    text-align: center;  
+    float: left;  
+}  
+  
+/*数值*/  
+.stepper input {  
+    flex:2;
+    float: left;  
+    margin: 0 auto;  
+    text-align: center;  
+    font-size: 12px;  
+    color: #000000;
+    /*给中间的input设置左右边框即可*/  
+    border-left:4rpx #eee solid;
+    border-right:4rpx #eee solid;  
+}  
+  
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+}  
+
+.goodsname
+{
+  flex:2;
+  font-size:28rpx;
+  text-align: left;
+  max-height:120rpx;
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden;  
+  text-overflow: ellipsis; 
+  -webkit-box-orient: vertical;
+  word-break: break-all;  
+  border:4rpx rgb(254, 238, 54) solid;
+}
+
+.state
+{
+  flex:1;
+  display:flex;
+  flex-direction: row;
+  border:4rpx rgb(254, 238, 54) solid;
+}
+
+.goodstate
+{
+  flex:1;
+  text-align: center;
+}
+
+.stateoperation
+{
+  flex:1;
+  text-align: center;
+  border-left:4rpx rgb(254, 238, 54) solid;
+}
+
+.stateoperationnone
+{
+  display: none;
+}
+
+.ansShow
+{
+  flex:1;
+  text-align: center;
+  border-left:4rpx rgb(254, 238, 54) solid;
+}
+
+.ansShownone
+{
+  display:none;
+}
+
+.date
+{
+  color:rgb(145, 145, 145);
+  text-align: right;
+  font-size:20rpx;
+  margin-right: 4rpx;
+}
+
+.deliveryshow
+{
+  flex:1;
+  text-align: center;
+  border-left:4rpx rgb(254, 238, 54) solid;
+}
+
+.deliveryshownone
+{
+  display:none;
+}

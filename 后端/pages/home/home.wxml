@@ -1,0 +1,119 @@
+<!-- 头部 -->
+  <view class='header'>
+    <view>
+       <text class='msg iconfont icon-xiaoxi' bindtap='skip' data-url='../msg/msg'></text>
+    </view>
+    <view class='headPic'>
+      <image class='pic' src='{{thumb}}'></image>
+      <text >{{nickname}}</text>
+    </view>
+  </view>    
+
+      <!-- 交易额  -->
+  <view class='myPoint'>
+    <view bindtap='skip' >
+      <text class='num' wx:if="{{today_deal>0}}">{{today_deal}}笔</text>
+      <text class='num' wx:else>0</text> 
+      <text>今日交易数</text>
+    </view>
+    <view bindtap='skip'>
+      <text class='num' wx:if="{{today_money>0}}">￥{{today_money}}</text>  
+      <text class='num' wx:else>￥0</text>  
+      <text>今日交易额</text>
+    </view>
+    <view bindtap='skip' >
+      <text class='num' wx:if="{{all_money>0}}">￥{{all_money ? all_money : 0}}</text>  
+       <text class='num' wx:else>￥0</text>   
+      <text>总交易额</text>      
+    </view>
+  </view>
+
+<!-- 订单管理 -->
+    <view class='order'>
+      <view class='orderTop'>
+        <text class='title'>订单管理</text>
+        <view class='more' bindtap='showOrders' data-status='0'>查看所有订单<text class='iconfont icon-enter'></text></view>
+<!-- <navigator class="more" url="../order/myOrder/myOrder">查看所有订单<text class='iconfont icon-enter'></text></navigator> -->
+     </view>
+
+      <view class='orderContent'>
+        <view class='status' bindtap='showOrders1' data-status='1'>
+          <view class='num' wx:if="{{wait_send>0}}">
+          {{wait_send}}</view>
+          <text class='iconfont icon-fahuo'></text>
+          <text>待发货</text>
+        </view>
+        <view class='status' bindtap='showOrders2' data-status='2'>
+          <view class='num' wx:if="{{delivery_num>0}}">
+          {{delivery_num}}</view>
+          <text class='iconfont icon-shouhuo'></text>
+          <text>派送中</text>
+        </view>
+        <view class='status' bindtap='showOrders3' data-status='3' >
+          <view class='num' wx:if="{{receive_num>0}}">
+          {{receive_num}}</view>
+          <text class='iconfont icon-pingjia'></text>
+          <text>已收货</text>
+        </view>
+
+        <view class='status' bindtap='skip' data-url='../order/afterGoods/afterGoods'>
+          <text class='iconfont icon-shouhou'></text>
+          <text>退换/售后</text>
+        </view>
+      </view>
+    </view>
+    
+
+    <!-- 服装审核 -->
+    <view class='check'>
+      <view class='checkTop'>
+        <text class='title'>审核管理</text>
+        <view class='more' bindtap='showChecks' data-status='0'>查看所有服装<text class='iconfont icon-enter'></text></view>
+      </view>
+
+      <view class='checkContent'>
+        <view class='Checkstatus' bindtap='showChecks4' data-status='4'>
+          <view class='Checknum' wx:if="{{wait_send2>0}}">{{wait_send2}}</view>
+          <text class='iconfont icon-che'></text>
+          <text>待寄回</text>
+        </view>
+        <view class='Checkstatus' bindtap='showChecks5' data-status='5'>
+          <view class='Checknum' wx:if="{{wait_check>0}}">{{wait_check}}</view>
+          <text class='iconfont icon-yanjing'></text>
+          <text>待审核</text>
+        </view>
+        <view class='Checkstatus' bindtap='showChecks6' data-status='6' data->
+          <view class='Checknum' wx:if="{{check_num>0}}">{{check_num}}</view>
+          <text class='iconfont icon-dianpu1'></text>
+          <text>审核完成</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 功能  -->
+    <view class='function'>
+      <view class='item'>
+        <view class='fLeft' bindtap='skip' data-url='../clothes/clothes'>
+          <text class='icon iconfont icon-fenlei'></text>
+          <text>服装管理</text>
+        </view>
+        <text class='iconfont icon-enter'></text>
+      </view>
+      <view class='item'>
+        <view class='fLeft' bindtap='skip' data-url='../member/member'>
+          <text class='icon iconfont icon-zuji'></text>
+          <text>会员管理</text>
+        </view>
+        <text class='iconfont icon-enter'></text>
+      </view>
+      <view class='item'>
+        <view class='fLeft' bindtap='skip' data-url='../msg/msg'>
+          <text class='icon iconfont icon-kefu'></text>
+          <text>用户反馈</text>
+        </view>
+        <text class='iconfont icon-enter'></text>        
+      </view>
+    </view>
+    
+
+

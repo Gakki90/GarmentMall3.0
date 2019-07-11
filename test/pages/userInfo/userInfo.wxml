@@ -1,0 +1,72 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+
+</view>
+<view class="custom_view"><!--操作区-->
+  <image class="custom_bg" style="height:{{CHeight}}px;width:{{CWidth}}px;" src="../image/image.jpg" mode="aspectFill"></image><!--背景图片-->
+  <view class="custom_content"><!--页面内容-->
+  
+
+
+  <view class="infocontainer">
+  <view class="info">
+  <view class="userinfo">
+  <!--<open-data class="userinfo-avatar" background-size="cover" type="userAvatarUrl"></open-data>
+  <open-data class="userinfo-nickname" type="userNickName"></open-data>-->
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  </view>
+  <view class="detail">
+  <view class="membership">
+    <text>会员积分：{{point}}</text>
+    <text>会员时限：{{ddl}}</text>
+    <button class="setting" bindtap="bindtap" ><cover-image src="../image/设置.png"></cover-image></button>
+  </view>
+  </view>
+  </view>
+
+
+<view class="list">
+   <view class="order" catchtap="toOrder">
+    <text class="myorder-text">我的订单</text>
+    <text class="myorderlook-text">查看全部订单</text>
+    <image class="next-image" src="../image/下一个.png"></image>
+  </view>
+
+  <view class="line"></view>
+
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name">
+      <view class="nav-item" catchtap="toOrderPage" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+<view class="line"></view>
+
+<view class="person-list">
+    <view class="list-item" bindtap="tapmember">
+      <image class="item-image" src="../image/会员.png"></image>
+      <text class="item-text">开通会员</text>
+    </view>
+    <view class="line"></view>
+    <view class="list-item" bindtap="tapfeedback">
+      <image class="item-image" src="../image/反馈.png"></image>
+      <text class="item-text">用户反馈</text>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="../image/常见问题.png"></image>
+      <text class="item-text">常见问题</text>
+    </view>
+    <view class="line"></view>
+
+</view>
+
+</view>
+
+
+  </view>
+</view>

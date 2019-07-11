@@ -1,0 +1,65 @@
+<!--pages/settingpage/settingpage.wxml-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<image style="height:40rpx;width:40rpx;position:absolute;bottom:5%;left:2%;" src="../image/backtopage.png" bindtap="tap"></image>
+</view>
+
+<view class="custom_view"><!--操作区-->
+  <image class="custom_bg" style="height:{{CHeight}}px;width:{{CWidth}}px;" src="../image/image.jpg" mode="aspectFill"></image><!--背景图片-->
+  <view class="custom_content"><!--页面内容-->
+  
+
+  <view class="infocontainer">
+  <view class="info">
+  <view class="userinfo">
+  <!--<open-data class="userinfo-avatar" background-size="cover" type="userAvatarUrl"></open-data>
+  <open-data class="userinfo-nickname" type="userNickName"></open-data>-->
+
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  </view>
+  </view>
+
+<view class="person-list">
+    <view class="list-item">
+      <image class="item-image" src="../image/会员.png"></image>
+      <text class="item-text">会员账号</text>
+      <text class="item-detail">{{membership}}</text>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="../image/倒计时.png"></image>
+      <text class="item-text">会员时限</text>
+      <text class="item-detail">{{endtime}}</text>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+      <image class="item-image" src="../image/积分.png"></image>
+      <text class="item-text">现有积分</text>
+      <text class="item-detail">{{point}}</text>
+    </view>
+    <view class="line"></view>
+     <view class="list-item">
+      <image class="item-image" src="../image/电话.png"></image>
+      <text class="item-text">联系方式</text>
+      <input class="item-input" value="{{tempphone}}" bindtap="bindtapphone" bindblur="inputphoneevent"></input>
+    </view>
+    <view class="line"></view>
+     <view class="list-item">
+      <image class="item-image" src="../image/地址.png"></image>
+      <text class="item-text">收货地址</text>
+      <input class="item-input" value="{{tempaddress}}" bindtap="bindtapaddress" bindblur="inputaddressevent"></input>
+    </view>
+    <view class="line"></view>
+    <view class="list-item">
+    <button class="{{showButtom?'save':'savenone'}}" bindtap="save">保存</button>
+    </view>
+</view>
+
+
+
+
+
+
+  </view>
+</view>

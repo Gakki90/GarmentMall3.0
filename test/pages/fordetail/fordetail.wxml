@@ -1,0 +1,31 @@
+<!--pages/fordetail/fordetail.wxml-->
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<image style="height:40rpx;width:40rpx;position:absolute;bottom:5%;left:2%;" src="../image/backtopage.png" bindtap="tap"></image>
+</view><!--上方导航栏-->
+  <!-- 底部悬浮栏 -->
+
+<image class="custom_bg" style="height:{{CHeight}}px;width:{{CWidth}}px;" src="../image/image.jpg" mode="aspectFill"></image><!--背景图片-->
+
+<view class="custom_content" style="height:{{CHeight}}px;"><!--页面内容-->
+<scroll-view scroll-y="true">
+<import src="../../utils/detailPage/detailPage.wxml"/>
+<template is="itemDetailPage" data="{{...itemDetail}}"/>
+</scroll-view>
+
+<view class="nav" style="width:{{CWidth}}px">
+<view class="bar" style="width:{{CWidth}}px">
+  <image class="navimage" bindtap="addCart" src="{{shopcartsrc}}" mode="scaleToFill"/>  
+  <image class="navimage" bindtap="addLike" src="{{likesrc}}" mode="scaleToFill"/> 
+  <button class="button-rent" bindtap="toggleDialog" >租赁</button>
+</view>
+</view>
+
+<import src="../../utils/cardPage/cardPage.wxml" />
+<view bindtap="bindtap" class="dialog_hide {{ showDialog ? 'dialog_show' : '' }}">
+<template is="decidepage" data="{{...itemDetail}}"/>
+</view>
+</view>
+
+
+

@@ -1,0 +1,254 @@
+/* pages/test/test.wxss*/
+//page{height: 100%}
+@import "../../utils/wxSearch/wxSearch.wxss";
+
+
+/* pages/index/index.wxss */
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+ 
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+ 
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+ 
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+ 
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+
+
+
+
+
+
+/*.newcontent
+{
+  display: -webkit-box;  /*设置为弹性盒子
+  -webkit-line-clamp: 2;  /*最多显示3行
+  overflow: hidden;  /*超出隐藏
+  text-overflow: ellipsis;  /*超出显示为省略号
+  -webkit-box-orient: vertical;
+  word-break: break-all;  /*强制英文单词自动换行
+  height:30px;
+}*/
+
+.newliteral
+{
+  display: flex;
+  flex-direction: column;
+  height:102rpx;
+}
+
+.newliteral text
+{
+  flex:2;
+  display: -webkit-box;  /*设置为弹性盒子*/
+  -webkit-line-clamp: 2;  /*最多显示3行*/
+  overflow: hidden;  /*超出隐藏*/
+  text-overflow: ellipsis;  /*超出显示为省略号*/
+  -webkit-box-orient: vertical;
+  word-break: break-all;  /*强制英文单词自动换行*/
+}
+
+.newliteral p
+{
+  flex:1;
+}
+
+.buttom-image
+{
+  flex:1.5;
+  height:60rpx;
+  margin:8rpx;
+}
+
+.swp
+{
+  height: 400rpx;
+  width: CWidth;
+  border: 4rpx #fff solid;
+}
+
+.swp image
+{
+  height:100%;
+  width:100%;
+}
+
+
+.category-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 0rpx;
+  padding: 0px 10px;
+}
+.category-title .title{
+  font-size: 14px;
+  font-weight:900;
+}
+
+.category-title .line_name{
+  font-size: 10px;
+  color: #98989f;
+  display: flex;
+  justify-content:space-between;/**两边对齐**/
+}
+
+.goods {
+   display: flex;
+} 
+.goods-item{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  color: #333;
+  margin-right:10rpx;
+}
+
+.goods-image{
+  width: 280rpx;
+  height: 300rpx; 
+}
+.goods-item text {
+  font-size: 25rpx;
+} 
+.goods-item p{
+  font-size: 30rpx;
+} 
+
+.welfare-container
+{
+  margin:20rpx;
+}
+
+.welfares{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:10px 5px;
+}
+.welfares-good{
+  height: 560rpx; 
+  width: 47%;
+  margin:0px auto;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  font-size: 24rpx;
+}
+.welfares-image{
+  width: 100%;
+  display: inline-block;
+  border: 1px #eee solid; 
+}
+.welfares-good .product-name{
+  color: #000;
+  height: 28px;
+  text-align:left;
+  margin: 0px 5px; 
+  margin-bottom: 5px; 
+}
+.product-price-wrap .product-price-new{
+  color: #e80080;
+  margin-left:5px;
+  font-weight:900;
+}
+.product-price-wrap .product-price-old{
+  color: #888;
+  text-decoration: line-through;
+  padding-left: 2px;
+}
+.product-price-wrap .discount{
+  position: absolute;
+  right: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+.brand_container
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.brand
+{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.brand_item
+{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand_image
+{
+  width:100%;
+  border: 4rpx rgba(254, 238, 54, 0.3) solid;
+  padding: 10rpx #fff;
+  border-radius: 50%;
+}
+
+.brand_name
+{
+  color: #000;
+  font-size: 10px;
+  text-align:center;
+  justify-content: center;
+}
+
+.brand_title
+{
+  margin-bottom: 0rpx;
+  padding: 0px 10px;
+}
+
+.title{
+  font-size: 14px;
+  font-weight:900;
+}
+
+.line_name{
+  font-size: 10px;
+  color: #98989f;
+  display: flex;
+  justify-content:space-between;/**两边对齐**/
+}
+
+.productname
+{
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  overflow: hidden;  
+  text-overflow: ellipsis; 
+  -webkit-box-orient: vertical;
+  word-break: break-all;  
+}

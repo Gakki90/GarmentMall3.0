@@ -1,0 +1,125 @@
+<!--pages/test/test.wxml-->
+<!--<text>pages/test/test.wxml</text>-->
+<!--<scroll-view id="bottom" scroll-y="true" style="height:1000px; width: 400px; word-wrap:break-word;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <text style="font-size: 60px;">HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</text>
+    <div style="position: absolute; bottom:0">
+    <text style="font-size: 60;">BOTTOM</text>
+    </div>
+</scroll-view>-->
+
+
+
+
+
+
+<!--<image mode="scaleToFill" src="../image/bg.jpg"></image>-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+</view><!--上方导航栏-->
+
+<!--<view class="custom_view"><!--操作区-->
+<image class="custom_bg" style="height:{{CHeight}}px;width:{{CWidth}}px;" src="../image/image.jpg" mode="aspectFill"></image><!--背景图片-->
+
+<view class="custom_content" style="height:{{CHeight}}px;"><!--页面内容-->
+
+<!--搜索框-->
+<import src="../../utils/wxSearch/wxSearch.wxml"/>
+<view class="wxSearch-section" id="swpcon" >
+<view class="wxSearch-pancel">
+<image class="buttom-image" bindtap="screeningtap" src="../image/分类.png" mode="aspectFill" />
+<input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+<image class="buttom-image" bindtap="wxSearchFn" src="../image/search.png" mode="aspectFill" />
+<template is="wxSearch" data="{{wxSearchData}}"/>
+</view>
+</view><!--搜索框-->
+
+<scroll-view scroll-y="true" style="height:{{SHeight}}px; width: {{CWidth}}px; word-wrap:break-word;"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+<!--轮播广告-->
+<swiper class="swp" indicator-dots="true" indicator-color="rgba(0,0,0,0.3)" indicator-active-color="#eee" autoplay="true" interval="3000" duration="500" circular="true" bindchange="bindchange">
+<block wx:for="{{swipers}}">
+<swiper-item>
+<image src="{{item}}" bindtap="swipclick" mode="aspectFill"/>
+</swiper-item>
+</block>
+</swiper><!--轮播广告-->
+
+<!--上新推荐 start-->
+<view class="hots-container"> 
+  <view class="category-title">
+    <text class="title">上新推荐</text>
+    <view class="line_name">
+      <text>你想要的都在这里</text>
+    </view>
+  </view>  
+  <scroll-view scroll-x="true">
+      <view class="goods">
+        <block wx:for-items="{{goodsHotItems}}" wx:key="goodsId">
+          <view class="goods-item" catchtap="tapSingleItemForNew" data-type="{{item.goodsName}}" data-typeid="{{item.goodsId}}">
+            <image src="{{serverurl}}{{item.goodsPicUrl}}" class="goods-image" mode="scaleToFill" />   
+            <view class="newliteral">
+            <text class="newcontent">{{item.goodsName}}</text>
+            <p>￥{{item.goodsPrice}}</p>  
+            </view>
+          </view>
+        </block> 
+      </view>
+    </scroll-view>   
+</view> 
+<!--上新推荐 end-->
+
+<!--品牌推荐-->
+<view class="brand_container">
+  <view class="brand_title">
+    <text class="title">大牌来袭</text>
+    <view class="line_name">
+      <text>穿最潮的衣，做最靓的仔</text>
+    </view>
+  </view>
+  <view class="brand">
+    <block wx:for-items="{{brandItems}}" wx:key="goodsId">
+      <view class="brand_item" catchtap="tapBrand" data-brand="{{item.brand}}" data-typeid="{{item.goodsId}}">
+        <view>
+          <image src="{{serverurl}}{{item.goodsPicUrl}}" class="brand_image" style="height: {{brandItemWidth}}px;" mode="scaleToFill" />
+        </view>
+        <view class="brand_name">
+          {{item.brand}}
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!--品牌推荐-->
+
+<!--猜你喜欢 start-->
+<view class="welfare-container"> 
+  <view class="category-title">
+    <text class="title">猜你喜欢</text>
+    <view class="line_name">
+      <text>停不下来的换装体验</text>
+    </view>
+  </view>  
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{goodsWelfareItems}}" wx:key="goodsId">
+          <view class="welfares-good" catchtap="tapSingleItemForNew" data-type="{{item.goodsName}}" data-typeid="{{item.goodsId}}">
+            <view>
+              <image src="{{serverurl}}{{item.goodsPicUrl}}" class="welfares-image" mode="aspectFill"/> 
+            </view>
+            <view class="productname">
+              {{item.goodsName}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.goodsPrice}}</p>   
+            </view>
+          </view>
+        </block> 
+      </view>
+  </scroll-view>  
+</view> 
+<!--猜你喜欢 end-->
+
+
+<text style="font-size:20px;display:flex;align-items:center;justify-content:center; background-color:rgba(255,255,255,0.8);width:100%;">没有更多啦~</text>
+
+</scroll-view>
+</view>

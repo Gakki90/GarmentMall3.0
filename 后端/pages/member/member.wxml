@@ -1,0 +1,27 @@
+<!--pages/mine/voucher/voucher.wxml-->
+<!-- 顶部 -->
+
+
+<!-- 会员  -->
+<view class='member' wx:for="{{member}}">
+  <view class='left'>
+    <view class='number'>
+      <text class='symbol'>积分：</text>
+      <text class='num'>{{item.userLevel}}</text>
+    </view>
+  </view>
+
+
+  <view class='right'>
+    <view class='content'>
+    <!-- <view>期限：{{time}}-{{item.endTime}}</view> -->
+    <!-- <view>期限：{{item.endTime}}</view> -->
+      <view class='textname'>用户id：{{item.userId}}</view>
+      <view  class='time'>{{item.endTime}}到期</view>
+    </view>
+  </view>
+  <view class='new' style='display:{{"true" }}'></view>
+  <view class='small'></view>
+  <text class='title' style='display:{{"true"}}'>会员</text>
+</view>
+

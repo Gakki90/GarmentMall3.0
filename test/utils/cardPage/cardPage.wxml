@@ -1,0 +1,106 @@
+<!--utils/cardPage/cardPage.wxml-->
+<template name="cardPage">
+<view class="cardPage" bindtap="tapItem" data-brand="{{brand}}">
+<view class="cardTitle">
+<text class="title">{{brand}}</text>
+<text class="title" style="position:absolute;right:0;">¥{{goodsPrice}}</text>
+</view>
+<view class="image">
+<image class="img" src="{{url}}{{goodsPicUrl}}" mode="aspectFill" catchtap="tapSingleItemForNew" data-type="{{goodsName}}" data-goodsid="{{goodsId}}"></image>
+<view class="selection">
+<view class="selectblock">
+<!-- 主容器 -->  
+  <!--<view class="{{ showDialog ? 'stepper' : 'stepper-hide' }}">-->
+  <view class="itemname">{{goodsName}}
+  </view>
+  <view class="stepper">  
+      <!-- 减号 -->  
+      <text class="{{delStatus}}" bindtap="delCount" data-index="{{index}}">-</text>  
+      <!-- 数值 -->  
+      <input type="number" bindchange="bindManual" value="{{quantity}}"  disabled="disabled"/>  
+      <!-- 加号 -->  
+      <text class="{{addStatus}}" bindtap="addCount" data-index="{{index}}">+</text>  
+  </view> 
+
+<view class="colorselect">
+<text class="selectsign" data-color="黑色" data-index="{{index}}" bindtap="colorchoose">黑色</text>
+<text class="selectsign" data-color="白色" data-index="{{index}}" bindtap="colorchoose">白色</text>
+<text class="selectsign" data-color="粉色" data-index="{{index}}" bindtap="colorchoose">粉色</text>
+</view>
+
+<view class="select">
+<text class="selectsign" data-size="S" data-index="{{index}}" bindtap="sizechoose">S</text>
+<text class="selectsign" data-size="M" data-index="{{index}}" bindtap="sizechoose">M</text>
+<text class="selectsign" data-size="L" data-index="{{index}}" bindtap="sizechoose">L</text>
+<image class="selectimg" src="../../shop.png" mode="aspectFit" data-index="{{index}}" bindtap="rent"></image>
+</view>
+</view>
+</view>
+</view>
+</view>
+</template>
+
+
+<template name="wishcardPage">
+<view class="cardPage" bindtap="tapItem">
+<view class="cardTitle">
+<text class="title">{{brand}}</text>
+<text class="title" style="position:absolute;right:0;">{{goodsPrice}}</text>
+</view>
+<view class="image">
+<image class="img" src="{{url}}{{goodsPicUrl}}" mode="aspectFill"></image>
+<view class="selection">
+<view class="selectblock">
+<!-- 主容器 -->  
+  <!--<view class="{{ showDialog ? 'stepper' : 'stepper-hide' }}">-->
+  <view class="itemnameforwish">{{goodsName}}
+  </view>
+<!--<view class="select">
+<image class="selectimg" src="../../shop.png" mode="aspectFit"></image>
+</view>-->
+</view>
+</view>
+</view>
+</view>
+</template>
+
+<template name="decidepage">
+<view class="cardPage" bindtap="tapItem" data-brand="{{brand}}">
+<view class="cardTitle">
+<text class="title">{{itemInfo[0].brand}}</text>
+<text class="title" style="position:absolute;right:0;">{{itemInfo[0].goodsPrice}}</text>
+</view>
+<view class="image">
+<image class="img" src="{{serverurl}}{{itemInfo[0].goodsPicUrl}}" mode="aspectFill"></image>
+<view class="selection">
+<view class="selectblock">
+<!-- 主容器 -->  
+  <!--<view class="{{ showDialog ? 'stepper' : 'stepper-hide' }}">-->
+  <view class="itemname">{{itemInfo[0].goodsName}}
+  </view>
+  <view class="stepper">  
+      <!-- 减号 -->  
+      <text class="{{delStatus}}" bindtap="delCount" data-id="{{itemInfo[0].goodsId}}">-</text>  
+      <!-- 数值 -->  
+      <input type="number" bindchange="bindManual" value="{{quantity}}"  disabled="disabled"/>  
+      <!-- 加号 -->  
+      <text class="{{addStatus}}" bindtap="addCount" data-id="{{itemInfo[0].goodsId}}">+</text>  
+  </view> 
+
+<view class="colorselect">
+<text class="selectsign" data-color="黑色" data-id="{{itemInfo[0].goodsId}}" bindtap="colorchoose">黑色</text>
+<text class="selectsign" data-color="白色" data-id="{{itemInfo[0].goodsId}}" bindtap="colorchoose">白色</text>
+<text class="selectsign" data-color="粉色" data-id="{{itemInfo[0].goodsId}}" bindtap="colorchoose">粉色</text>
+</view>
+
+<view class="select">
+<text class="selectsign" data-size="S" data-id="{{itemInfo[0].goodsId}}" bindtap="sizechoose">S</text>
+<text class="selectsign" data-size="M" data-id="{{itemInfo[0].goodsId}}" bindtap="sizechoose">M</text>
+<text class="selectsign" data-size="L" data-id="{{itemInfo[0].goodsId}}" bindtap="sizechoose">L</text>
+<image class="selectimg" src="../../shop.png" mode="aspectFit" data-id="{{itemInfo[0].goodsId}}" bindtap="rent"></image>
+</view>
+</view>
+</view>
+</view>
+</view>
+</template>

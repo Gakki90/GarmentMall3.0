@@ -1,0 +1,29 @@
+{
+  "pages": [
+  
+    "pages/index/index",
+    "pages/home/home",
+    "pages/clothes/clothes",
+    "pages/logs/logs",
+    "pages/msg/msg",
+    "pages/order/myOrder/myOrder",
+    "pages/order/myOrder1/myOrder",
+    "pages/order/myOrder2/myOrder",
+    "pages/order/myOrder3/myOrder",
+    "pages/order/afterGoods/afterGoods",
+    "pages/check/check",
+    "pages/check4/check",
+    "pages/check5/check",
+    "pages/check6/check",
+    "pages/member/member"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

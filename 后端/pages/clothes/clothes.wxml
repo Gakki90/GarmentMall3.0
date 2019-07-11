@@ -1,0 +1,138 @@
+<!--pages/mine/address/address.wxml-->
+
+<!--pages/order/myOrder/myOrder.wxml--><!--pages/order/my-order.wxml-->
+<!--pages/order/my-order.wxml-->
+
+<view class='page'>
+  <view class="data-v-top"> </view>
+  <view class='orderBig'>
+
+  <!-- 一次循环 填充粗略信息 -->
+      <view class='my-order' wx:for="{{list1}}" wx:for-item='order'>
+        <view class='order-title'>
+          <view class='order-title-num'>商品编号 <text>{{order.goodsId}}</text></view>
+          <view class='order-title-num'>品牌 <text>{{order.brand}}</text></view>
+          <view class='order-title-num'>上新时间 <text>{{order.marketDate }}</text></view>
+          </view>
+<!-- 配对3 -->
+        <view class='order-content' bindtap="goodDetail" data-id='{{order.goodsId}}'>
+          <image src="{{prefix}}{{order.goodsPicUrl }}"></image>
+          <view class='order-content-info'> 
+            <text>{{order.goodsName}}</text>
+            <view class='order-content-money'>
+             标签:{{order.lable}} 
+                   
+            </view>
+          </view>
+        </view>
+
+               <view class='order-num-price'>
+            <view class='order-price'>
+              <text> 颜色：{{order.color}}  </text>
+              <text decode="{{true}}"> &nbsp;尺寸：{{order.size}}</text>
+              <text decode="{{true}}"> &nbsp;库存：{{order.stock}}件</text>
+              <!-- <text decode="{{true}}"> &nbsp;样式：{{order.style}}</text> -->
+              <text decode="{{true}}"> &nbsp;金额：￥{{order.goodsPrice}}</text>
+
+            </view>
+        </view>
+
+        <view class='order-status'>
+        <view class='order-status-harvest' data-order_id="{{order.goodsId}}"  data-iddetail="{{order.goodsDetaiId}}" bindtap="bindDelete">
+          删除
+        </view>
+        <view class='order-status-harvest' data-order_id="{{order.goodsId}}"  data-iddetail="{{order.goodsDetaiId}}" bindtap='bindEdit'>
+          编辑
+        </view>   
+        </view>
+<!-- 配对3 -->
+</view>
+
+ <!-- 配对 -->       
+
+</view>
+</view>
+
+         
+<!-- 新增商品框框 -->
+<!-- 这是从另外一个复制过来的 -->
+    <form bindsubmit="formSubmit" data-id="{{clothesInfo.goodsDetaiId }}">
+  <view class='cover' style='display:{{display}}'>
+    <view class='add'>
+      <view class='title'>
+        <view class='subTitle'>商品信息填写</view>
+        <text class='btn iconfont icon-tuichu btn-error' bindtap='toastHide'></text>
+      </view>
+      <!-- 内容 -->
+      <view class='content'>
+        <view class='mobile'>
+          <text>商品编号：</text>
+          <input name='goodsId' type='text' placeholder='请输入商品编号' placeholder-class="phcolor" bindblur="validateType" value="{{clothesInfo[0].goodsId }}"></input>
+        </view>
+          <view class='accept_name'>
+          <text>商品品牌：</text>
+          <input name='brand' type='text' placeholder='请输入商品品牌' placeholder-class="phcolor" value="{{clothesInfo[0].brand }}" bindblur="validateType"></input>
+        </view>
+        <view class='accept_name'>
+          <text>商品名：</text>
+          <input name='goodsName' type='text' placeholder='请输入商品名' placeholder-class="phcolor" value="{{clothesInfo[0].goodsName }}" bindblur="validateType"></input>
+        </view>
+
+        <!-- <view class='accept_name'>
+          <text>商品图片：</text>
+          <input name='goodsPicUrl' type='text' placeholder='请输入图片地址' placeholder-class="phcolor" value="{{prefix}}{{clothesInfo[0].goodsPicUrl }}" bindblur="validateType"></input>
+        </view> -->
+          <view class='view'>商品图片：</view>      
+  <image class='img' wx:if="{{!tempFilePaths[0]}}" bindtap='img_item' id='0' name='goodsPicUrl' src='{{prefix}}{{clothesInfo[0].goodsPicUrl }}'></image>
+  <image class='img' wx:else bindtap='img_item' id='0' name='goodsPicUrl' src='{{tempFilePaths[0]}}'></image>
+
+
+        <view class='accept_name'>
+          <text>商品价格：</text>
+          <input name='goodsPrice' type='text' placeholder='请输入商品价格' placeholder-class="phcolor" value="{{clothesInfo[0].goodsPrice}}" bindblur="validateType"></input>
+        </view>
+        <view class='accept_name'>
+          <text>商品标签：</text>
+          <input name='lable' type='text' placeholder='请输入商品标签' placeholder-class="phcolor" value="{{clothesInfo[0].lable}}" bindblur="validateType"></input>
+        </view>
+<!-- 下一个数据库 -->
+
+        <view class='mobile'>
+          <text>商品颜色：</text>
+          <input name='color' type='text' placeholder='请输入商品颜色' placeholder-class="phcolor" bindblur="validateType" value="{{clothesInfo[0].color}}"></input>
+        </view>
+        <view class='addrs'>
+        <text>具体编号：</text>
+          <input name='goodsdetailid' type='text' placeholder='请输入商品具体编号' placeholder-class="phcolor" bindblur="validateType" value="{{clothesInfo[0].goodsDetaiId}}"></input>
+        </view>
+        <view class='addrs'>
+          <text>商品型号：</text>
+          <input name='size' type='text' placeholder='请输入您的商品型号' placeholder-class="phcolor" bindblur="validateType" value="{{clothesInfo[0].size}}"></input>
+        </view>
+
+        <view class='mobile'>
+          <text>商品库存：</text>
+          <input name='stock' type='text' placeholder='请输入商品编号' placeholder-class="phcolor" bindblur="validateType" value="{{clothesInfo[0].stock}}"></input>
+        </view>
+
+         <!-- <view class='addrs'>
+          <text>商品样式：</text>
+          <input name='style' type='text' placeholder='请输入您的商品样式' placeholder-class="phcolor" bindblur="validateType" value="{{clothesInfo[0].style}}"></input>
+        </view> -->
+
+      </view>
+      <view class='submit'>
+        <button formType="submit" >立即保存</button>
+      </view>
+    </view>
+  </view>
+</form>  
+
+       <view class='bottom' bindtap='toastShow'>新增商品</view>
+       <view class='null'></view>
+<view class="dialog-mask " style="visibility:{{isVisible ? 'visible': 'hidden'}}" bindtap="hideMenuTap " />
+
+
+
+
+

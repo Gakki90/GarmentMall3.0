@@ -1,0 +1,398 @@
+/* pages/mine/address/address.wxss */
+.page{
+  width: 100%;
+  height: 100%;
+  padding: 0 4%;
+  background-color: rgb(244,244,244);
+}
+.data-v-top {
+    width: 100%;
+    height: 250rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+     z-index: -1; 
+    background: -webkit-gradient(linear, left top, right top, from(#ff2764), to(#f82546));
+    background: linear-gradient(to right, #ff2764, #f82546);
+}
+.orderBig{
+    position: absolute; 
+    top:95rpx; 
+    
+}
+.my-order{
+    height: 375rpx;
+    width: 95%;
+    margin-top: 30rpx;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 2px rgba(165, 33, 33, .2);
+    box-shadow: 2px 2px 2px rgba(165, 33, 33, .2);
+}
+.order-title{
+  padding: 0 15rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  height: 60rpx;
+  align-items:center;
+  font-size: 21rpx;
+}
+.order-title-status{
+    float: right;
+    color: #ff5858;
+    font-weight: normal;
+}
+.order-title-num{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color:rgb(85,85,85);
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+.order-content{
+  padding: 0 15rpx;
+  background-color: rgb(248,248,248);
+   display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+   align-items: center;
+  height: 145rpx;
+}
+.order-content image{
+  width: 125rpx; 
+  height: 125rpx;
+  margin-right: 10rpx; 
+  background-color: #eeeeee;
+}
+ .order-contents{
+  height: 145rpx;
+  background-color: rgb(248,248,248);  
+}
+.order-contents scroll-view{
+  width: 680rpx;
+  white-space: nowrap;
+}  
+.order-contents image{
+  width: 125rpx; 
+  height: 125rpx;
+  margin-left: 10rpx; 
+  margin-top: 10rpx;
+  background-color: #eeeeee;
+} 
+.order-content text{
+  font-size: 22rpx;
+}
+.order-content-info{
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center; 
+  margin-left: 10rpx;
+  width: 560rpx;
+  height: 145rpx;
+}
+.order-content-info text{
+  height:80rpx;
+  line-height: 45rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.order-content-info .order-content-money{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}
+.order-content-info .order-content-money text{
+  text-decoration:line-through;  
+  margin-left:15rpx; 
+  color:#ccc;
+}
+.order-num-price{
+  height: 80rpx;
+  width: 100%;
+  line-height: 60rpx;
+  border-bottom:1px solid #eee;   
+}
+.order-price{
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  float:right;
+}
+
+.orderInfo{
+  width: 100%;
+  height: 54rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 54rpx;
+  border-bottom: solid #e4e4e4 1rpx;
+}
+.orderInfo .left{
+  margin-left: 30rpx;
+}
+.orderInfo .right{
+  margin-left: 40rpx;
+}
+
+.order-status-pay{
+  margin-right:15rpx;
+  margin-top:30rpx; 
+  float: right;
+  height: 45rpx;
+  width: 115rpx;
+  font-size: 22rpx;
+  background-color: rgb(254,39,97);
+  text-align: center;
+  line-height: 45rpx;
+  color:#fff;
+  border-radius: 5rpx; 
+}
+.order-status-after-sale{
+  margin-right:15rpx;
+  margin-top:30rpx; 
+  float: right;
+  height: 45rpx;
+  width: 115rpx;
+  border:1px solid #ccc;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 5rpx; 
+}
+.order-status-harvest{
+  margin-right:15rpx;
+  margin-top:30rpx; 
+  float: right;
+  height: 45rpx;
+  width: 115rpx;
+  color: rgb(250,38,78);
+  border:1px solid rgb(250,38,78);
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 5rpx; 
+}
+/* 上面加了一点 */
+.top{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 176rpx;
+  background: linear-gradient(to right, #fa5181, #ff2b49);
+}
+.bottom{
+  position: fixed;
+  left: 4%;
+  width: 92%;
+  height: 72rpx;
+  background: linear-gradient(to right, #f7907e, #f76f57);
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 4rpx;
+  line-height: 72rpx;
+  margin-top: 10rpx;
+}
+.addressList{
+  position: relative;
+  top:40rpx;
+  width: 92%;
+  margin: 0 auto;
+}
+.list{
+  height: 250rpx;
+  background-color: #fff;
+  border:solid 1rpx #eadcdc;
+  border-radius: 5rpx;
+  margin-top:30rpx; 
+}
+.list .address{
+  position: absolute;
+  width: 86%;
+  height: 186rpx;
+  padding: 34rpx 20rpx;
+}
+.address .info{
+  height: 120rpx;
+}
+.info .top1{
+  width: 100%;
+  height: 30rpx;
+}
+.info .top1 .name{
+  float: left;
+  height: 30rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+.info .top1 .phone{
+  float: left;
+  height: 30rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 30rpx;
+  margin-left: 68rpx;
+}
+.info .addr{
+  color:#666;
+  font-size: 24rpx;
+  margin-top: 30rpx;
+}
+.operation{
+  width: 100%;
+  height: 50rpx;
+  margin-top: 30rpx;
+}
+
+.operation .edit{
+  width: 150rpx;
+  height: 50rpx;
+  float: right;
+  color: #818181;
+  font-size: 24rpx;
+  margin-right: 42rpx; 
+
+}
+.operation .edit .icon-bianji{
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  margin-right: 6rpx;
+  line-height: 40rpx;
+} 
+.operation .edit text{
+  height: 50rpx;
+  font-size: 35rpx;
+  line-height: 50rpx;
+}
+
+.operation .del{
+  float: right;
+  color: #818181;
+  font-size: 35rpx;
+  margin-top: 27rpx;
+}
+.operation .del .icon-shanchu{
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 35rpx;
+  margin-right: 6rpx;
+  line-height: 40rpx;
+
+} 
+.operation .del text{
+  height: 34rpx;
+ line-height: 34rpx;
+  
+}
+
+.null{
+  width: 100%;
+  height: 160rpx;
+}
+/* pages/testclothes/testclothes.wxss */
+.cover{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;    
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 250, 250);
+}
+.add{
+  position: relative;
+  left: 4%;
+  top:10rpx;
+  width: 92%;
+  height: 92%;
+  background-color: #fff;
+  border-radius: 4rpx;
+  z-index: 999;
+}
+/* 题目 商品信息填写和图标两部分 */
+.title{
+  width: 92%;
+  height: 78rpx;
+  margin: 0rpx auto;
+  position: relative;
+}
+/* 那个叉叉 */
+.title .btn{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.title .subTitle{
+  float: left; 
+  height: 30rpx;
+  font-size: 28rpx;
+  line-height: 30rpx;
+  margin-left: 200rpx;
+  margin-top: 24rpx;
+}
+/* 内容 */
+.content{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 0 20rpx;
+  font-size: 25rpx;
+}
+.accept_name,.mobile,.location,.addrs{
+  position: relative;
+  height: 64rpx;
+  margin-top: 20rpx;
+}
+.content text{
+  float:left;
+  width: 130rpx;
+  height: 62rpx;
+  text-align: right;
+  line-height: 62rpx;
+}
+
+.form .view{
+  display: inline-block;
+  width: 130rpx;
+  position: relative;
+  bottom: 10rpx
+}
+.img{
+  height: 150rpx;
+  display: block;
+  margin-left: 280rpx;
+  width: 150rpx;
+}
+input{
+  width: 454rpx;    
+  height: 62rpx;
+  padding-left: 36rpx;
+  float: left;
+  border: solid #e6e6e6 1rpx;
+}
+/* 提交button */
+.submit{
+  width: 500rpx;
+  height: 70rpx;
+  margin: 0 auto;
+}
+.submit button{
+  background: linear-gradient(to right, #fa5181, #ff2b49);
+  color:#fff;
+}
+
+
+/* 取消按钮 */
+.btn-error {
+  font-size: 26rpx;
+  padding: 10px;
+}

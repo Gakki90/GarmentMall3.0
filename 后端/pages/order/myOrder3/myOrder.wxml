@@ -1,0 +1,60 @@
+<!--pages/order/myOrder/myOrder.wxml--><!--pages/order/my-order.wxml-->
+<!--pages/order/my-order.wxml-->
+
+<view class='page'>
+  <view class="data-v-top"> </view>
+  <view class='orderBig'>
+
+  <!-- 一次循环 填充粗略信息 -->
+      <view class='my-order' wx:for="{{orderdetail}}" wx:for-item='order'>
+
+      <!-- 配对1 -->
+        <view class='order-title'  >
+          <view class='order-title-num'>订单号 <text>{{order.orderId}}</text></view>
+          <view class='order-title-status' wx:if="{{order.status == 1}}">待发货</view>
+          <view class='order-title-status' wx:if="{{order.status == 2}}">派送中</view>
+          <view class='order-title-status' wx:if="{{order.status == 3 || order.status>3 }}">已收货</view>
+        </view>
+<!-- 配对1完成 -->
+     
+
+<!-- 二次循环 填充细节信息 -->
+<!-- 显示商品信息 一次只能购买一件商品 -->
+<!-- 配对3 -->
+        <view class='order-content' bindtap="goodDetail" data-id='{{order.orderId}}'>
+          <image src="{{prefix}}{{order.url}}"></image>
+          <view class='order-content-info'> 
+            <text>{{order.goodsName}}</text>
+            <view class='order-content-money'>
+            ￥{{order.orderPrice}}
+            </view>
+          </view>
+        </view>
+<!-- 配对3 -->
+
+       <view class='order-num-price'>
+            <view class='order-price'>
+              共<text>{{order.amount}}</text>件商品 <text>金额：￥{{order.orderPrice}}</text>
+            </view>
+        </view>
+ <!-- 配对 -->       
+
+<!-- 配对2 -->
+ <view class='order-status'>
+        <view class='order-status-harvest' data-order_id="{{order.orderId}}"  bindtap="confirmDelivery" wx:if="{{order.status == 1}}">
+          确认发货
+        </view>
+        <view class='order-status-after-sale' data-order_id="{{order.orderId}}" wx:if="{{order.status == 2 }}" bindtap='logist'>
+          查看物流
+        </view>    
+        </view>    
+  <!-- 配对2完成 -->
+
+  </view>
+</view>
+</view>
+
+
+  
+
+  

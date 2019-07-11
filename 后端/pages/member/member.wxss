@@ -1,0 +1,130 @@
+/* pages/mine/voucher/voucher.wxss */
+page{
+  background-color: #f5f4f9;
+}
+.top{
+  width: 100%;
+  height: 60rpx;
+  background-color:#fff;
+  margin-top: 2rpx;
+}
+.top text{
+  color:#333;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  margin: 0 76rpx;
+}
+.top .checked{
+  color: f51322;
+  border-bottom: solid #f51322 1rpx;
+}
+.member{
+  position: relative;
+  width: 92%;
+  height: 150rpx;
+  background-color:#fff;
+  margin-left:4%;
+  margin-top: 10rpx;
+}
+.member .left{
+  float: left;
+  width: 30%;
+  height: 150rpx;
+  background: linear-gradient(to right, #ee7272, #dd504b);
+  color: #fff;
+}
+.left .number {
+  height: 50rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+.left .number .symbol{
+  font-size: 30rpx;
+}
+.left .number .num{
+  font-size: 40rpx;
+  line-height: 30rpx;
+}
+.left .condition{
+  height: 22rpx;
+  font-size: 22rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  line-height: 22rpx;
+}
+
+/* .leftBorder text{
+  float: left;
+  width: 8rpx;
+  height: 8rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: 4rpx;
+} */
+.member .right{
+  position: absolute;
+  width: 56%;
+  height: 100rpx;
+  margin-left: 34%;
+  padding: 30rpx 0;
+}
+.right .content{
+  width: 100%;
+  height: 100rpx;
+}
+.content .textname{
+  height: 35rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+.content .time{
+  float: right;
+  height: 34rpx;
+  bottom: 10rpx;
+  width: 65%;
+  color: #706a6a;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  /* margin-bottom: 20rpx; */
+}
+
+.textcondition{
+  float: right;
+  width: 130rpx;
+  height: 10rpx;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 2rpx;
+  color:#f55050; 
+
+}
+
+
+
+.new{
+  position: absolute;
+  right: 0;
+  border-top:40rpx solid #ffea00;
+  border-left:40rpx solid transparent;
+  border-right:40rpx solid #ffea00;
+  border-bottom: 40rpx solid transparent;
+}
+.small{
+  position: absolute;
+  right: 0;
+  border-top:18rpx solid #fff;
+  border-left:18rpx solid transparent;
+  border-right:18rpx solid #fff;
+  border-bottom: 18rpx solid transparent;
+}
+ .title{
+  position: absolute;
+  top:14rpx;
+  right: 7rpx;
+  color: #f63020;
+  font-size: 20rpx;
+  transform: rotate(45deg);
+} 
+
+

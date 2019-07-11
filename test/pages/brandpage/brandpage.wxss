@@ -1,0 +1,3 @@
+/* pages/brandpage/brandpage.wxss */
+@import "../../utils/detailPage/detailPage.wxss";
+

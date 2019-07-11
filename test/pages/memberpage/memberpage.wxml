@@ -1,0 +1,40 @@
+<!--pages/memberpage/memberpage.wxml-->
+<!--pages/orderpage/orderpage.wxml-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<image style="height:40rpx;width:40rpx;position:absolute;bottom:5%;left:2%;" src="../image/backtopage.png" bindtap="tap"></image>
+</view>
+
+<view class="custom_view"><!--操作区-->
+  <image class="custom_bg" style="height:{{CHeight}}px;width:{{CWidth}}px;" src="../image/image.jpg" mode="aspectFill"></image><!--背景图片-->
+  <view class="custom_content"><!--页面内容-->
+
+<view class="person-list">
+<view class="inputphone">
+<input class="inputnumber" placeholder="请输入电话号码" bindblur="inputphoneevent"></input>
+</view>
+
+    <view class="list-item">
+      <image class="item-image" src="../image/会员.png"></image>
+      <text class="item-text">包月会员</text>
+      <button bindtap="tapmember" class="defray" data-text="{{monthfee}}">{{monthfee}}¥</button>
+    </view>
+    <view class="list-item">
+      <image class="item-image" src="../image/会员.png"></image>
+      <text class="item-text">包季会员</text>
+       <button bindtap="tapmember" class="defray" data-text="{{seasonfee}}">{{seasonfee}}¥</button>
+    </view>
+    <view class="list-item">
+      <image class="item-image" src="../image/会员.png"></image>
+      <text class="item-text">包年会员</text>
+      <button bindtap="tapmember" class="defray" data-text="{{yearfee}}">{{yearfee}}¥</button>
+    </view>
+
+</view>
+
+
+
+
+
+
+</view>
+</view>

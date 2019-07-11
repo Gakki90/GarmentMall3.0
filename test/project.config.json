@@ -1,0 +1,174 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.3",
+	"appid": "wx7951d36813206fb5",
+	"projectname": "test",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 16,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/fordetail/fordetail",
+					"pathName": "pages/fordetail/fordetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shoppage/shoppage",
+					"pathName": "pages/shoppage/shoppage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/userInfo",
+					"pathName": "pages/userInfo/userInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/settingpage/settingpage",
+					"pathName": "pages/settingpage/settingpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/userInfo",
+					"pathName": "pages/userInfo/userInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/memberpage/memberpage",
+					"pathName": "pages/memberpage/memberpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/feedbackpage/feedbackpage",
+					"pathName": "pages/feedbackpage/feedbackpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cartpage/cartpage",
+					"pathName": "pages/cartpage/cartpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/brandpage/brandpage",
+					"pathName": "pages/brandpage/brandpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/screeningpage/screeningpage",
+					"pathName": "pages/screeningpage/screeningpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wishpage/wishpage",
+					"pathName": "pages/wishpage/wishpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/memberpage/memberpage",
+					"pathName": "pages/memberpage/memberpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/firstpage/firstpage",
+					"pathName": "pages/firstpage/firstpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wishpage/wishpage",
+					"pathName": "pages/wishpage/wishpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wishpage/wishpage",
+					"pathName": "pages/orderlistpage/orderlistpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/orderpage/orderpage",
+					"pathName": "pages/orderpage/orderpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userInfo/userInfo",
+					"pathName": "pages/userInfo/userInfo",
+					"scene": null
+				}
+			]
+		}
+	}
+}

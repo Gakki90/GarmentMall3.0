@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#ffffff",
+  "navigationBarTitleText":"正在加载",
+  "backgroundTextStyle": "dark"
+}
