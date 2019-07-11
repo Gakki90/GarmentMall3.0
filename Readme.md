@@ -212,7 +212,7 @@ Spring Boot技术栈参考以下文档或者项目：
 ### 1.3.1 Mybatis-generator
 当你已经生成好entity，mapper，mapping文件后，数据库如果要新增字段或者表时，要把mapping下面的xml文件删除，否则会导致代码的崩溃
 
-###1.3.2 Druid
+### 1.3.2 Druid
 配置好Druid数据源后，可进入 http://localhost:8080/druid 进入监控页面，但要在项目启动类上加上@ServletComponentScan
 原因：druid监控页面是一个servlet
 ```
