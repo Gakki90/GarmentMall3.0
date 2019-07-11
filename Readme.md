@@ -4,10 +4,19 @@
 
 GarmentMall是一个简单的会员制服装管理系统，包括管理员微信端，用户微信端以及基于spring boot的后端。
 
-![](./pic1/1-1.png)    
+![](./pic1/1-5.png)    
 
 
 项目的架构是SpringBoot+Mybatis+微信小程序
+
+* 图片展示：
+
+	* 用户前端
+   ![](./pic1/1-1.png)  ![](./pic1/1-3.png) 
+
+	* 管理员后端
+	![](./pic1/1-4.png)  ![](./pic1/1-6.png)  
+	
 
 
 后端技术栈：
@@ -43,14 +52,14 @@ GarmentMall是一个简单的会员制服装管理系统，包括管理员微信
 
 ## 1.2 系统功能
 
-从业务功能上，目前由六个业务模块组成：
+从业务功能上，目前由五个业务模块组成：
 
 * 会员业务模块
 * 商场业务模块
 * 商品业务模块
 * 推荐业务模块
 * 系统业务模块
-* 配置业务模块
+
 
 ### 1.2.1 小商城功能
 
@@ -91,7 +100,7 @@ GarmentMall是一个简单的会员制服装管理系统，包括管理员微信
 * 系统管理(dai)
   * 管理员
   * 对象存储
-  * 权限管理
+  * 权限管理 （待开发
   * 定时任务（待定）
   * 操作日志
 
@@ -171,6 +180,14 @@ Spring Boot技术栈参考以下文档或者项目：
 
 ###1.2.1 文档结构
 
+![](./pic1/1-7.png)   
+
+* Admin-wx：管理员微信端
+* User-wx ：用户微信端
+* DB-file：数据库文件
+* GarmentMall-core ：springboot项目后端
+
+
 ![](./pic1/1-2.png)   
 * demo
  * aspect:：基于AOP实现日志记录
@@ -226,3 +243,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 }
 ```
+### 1.3.4 微信端API
+
+项目并没有发布，测试接口是通过连接手机wifi来实现不同主机之间的接口测试，所以在微信小程序中需要改ip地址：（可用 ”ipconfig“ 来查看本机ip地址）
+   *  在admin-wx中修改config/api.js  中的prefix 
+   *  在user-wx中修改app.js 中的serverUrl
+    
